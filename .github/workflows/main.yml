@@ -1,36 +1,32 @@
-name: Deploy to GitHub Pages
+name: DeployToGitHubPages
+env:
+  PUBLISH_DIR: BlazorOnGitHubPages/bin/Release/net5.0/publish/wwwroot
 
-# 每次程式碼Push到master，執行workflow
+# Controls when the action will run
 on:
   push:
     branches: [ main ]
 
 jobs:
-  deploy-to-github-pages:
-    # 使用ubuntu
+  build:
     runs-on: ubuntu-latest
     steps:
-    # 使用checkout actions
     - uses: actions/checkout@v2
-    
-    # 安裝.NET Core SDK 3.1
-    - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1.6.0
+
+    - name: Publish app
+      run: dotnet publish -c Release
+
+    - name: Rewrite base href
+      uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
       with:
-        dotnet-version: 5.0    
-       
-    # 發佈程式到Release資料夾
-    - name: Publish .NET Core Project
-      run: dotnet publish AboutMe.csproj -c Release -o release --nologo
-    
-    # 加入一個.nojekyll檔案
-    - name: Add .nojekyll file
-      run: touch release/wwwroot/.nojekyll
-    
-    # 將release/wwwroot的程式碼，push到gh-pages分支
-    - name: Commit wwwroot to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.5.9
+        html_path: ${{ env.PUBLISH_DIR }}/index.html
+        base_href: /BlazorOnGitHubPages/
+
+    - name: GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v1.5.1
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUBPAGE }}
-        BRANCH: gh-pages
-        FOLDER: release/wwwroot
+        target_branch: gh-pages
+        build_dir: ${{ env.PUBLISH_DIR }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
