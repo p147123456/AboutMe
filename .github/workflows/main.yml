@@ -25,9 +25,12 @@ jobs:
       run: touch release/wwwroot/.nojekyll
     
     # 將release/wwwroot的程式碼，push到gh-pages分支
-    - name: Commit wwwroot to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.5.9
+    
+    - name: GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v1.5.1
       with:
+        target_branch: gh-pages
+        build_dir: release/wwwroot
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUBPAGE }}
-        BRANCH: gh-pages
-        FOLDER: release/wwwroot
