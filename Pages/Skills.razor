@@ -1,0 +1,38 @@
+﻿@page "/Skills"
+<RadzenTree Expand=@OnExpand Change=@OnChange Style="width: 100%; height: auto;font-size:30px">
+    <RadzenTreeItem Text="Mobile">
+        <RadzenTreeItem Text="Android(Java)" />
+        <RadzenTreeItem Text="Flutter(Dart)" />
+    </RadzenTreeItem>
+    <RadzenTreeItem Text="Web">
+        <RadzenTreeItem Text="Razor(C#)" />
+        <RadzenTreeItem Text="Blazor(C#)" />
+    </RadzenTreeItem>
+    <RadzenTreeItem Text="Windows">
+        <RadzenTreeItem Text="WinForm(C#)" />
+        <RadzenTreeItem Text="WPF(C#)" />
+    </RadzenTreeItem>
+    <RadzenTreeItem Text="Other">
+        <RadzenTreeItem Text="Git" />
+        <RadzenTreeItem Text="SVN" />
+        <RadzenTreeItem Text="RESTflu APIs" />
+        <RadzenTreeItem Text="Google Admob" />
+        <RadzenTreeItem Text="facebook audience network" />
+        <RadzenTreeItem Text="Google Map API" />
+        <RadzenTreeItem Text="Google Play , Apple App Store上架經驗" />
+        <RadzenTreeItem Text="IIS 架站" />
+    </RadzenTreeItem>
+</RadzenTree>
+
+
+@code {
+    void OnChange(TreeEventArgs args)
+    {
+      
+    }
+
+    void OnExpand(TreeExpandEventArgs args)
+    {
+
+    }
+}
