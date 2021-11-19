@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+# 每次程式碼Push到main，執行workflow
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-to-github-pages:
+    # 使用ubuntu
+    runs-on: ubuntu-latest
+    steps:
+    # 使用checkout actions
+    - uses: actions/checkout@v2
+    
+    - name: Publish app
+      run: dotnet publish -c Release
+
+    # 發佈程式到Release資料夾
+    - name: Publish .NET Core Project
+      run: dotnet publish AboutMe.csproj -c Release -o release --nologo
+    
+    # 加入一個.nojekyll檔案
+    - name: Add .nojekyll file
+      run: touch release/wwwroot/.nojekyll
+    
+    # 將release/wwwroot的程式碼，push到gh-pages分支
+    
+    - name: GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v1.5.1
+      with:
+        target_branch: gh-pages
+        build_dir: release/wwwroot
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUBPAGE }}
