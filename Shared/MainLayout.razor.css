@@ -33,6 +33,15 @@
     }
 
 @media (max-width: 640.98px) {
+    .page {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100vw;
+        height: 450px;
+        position: relative;
+        top: 0;
+    }
     .top-row:not(.auth) {
         display: none;
     }

@@ -1,7 +1,6 @@
-﻿
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+﻿<div class="sidebar-img">
     <RadzenImage Path="images/me.JPG"
-      Style="
+                 Style="
         height: 180px;
         width: 180px;
         border-radius: 50%;
@@ -10,26 +9,28 @@
         display: block;
         margin:30px 30px 0px 30px
         " />
+</div>
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <ul class="nav flex-column">
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"style="font-weight:bold"></span> 關於
+                <span class="oi oi-home" aria-hidden="true" style="font-weight:bold"></span> 關於
             </NavLink>
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="skills">
-                <span class="oi oi-book" aria-hidden="true"style="font-weight:bold"></span> 技能
+                <span class="oi oi-book" aria-hidden="true" style="font-weight:bold"></span> 技能
             </NavLink>
         </li>
     </ul>
-    <div class="sidebar-footer">
-        <div class="icontext" style="font-size:15px">
-            <RadzenIcon Icon="mail" /> <a href="mailto:p147123456@gmail.com" style="padding-left:10px;">p147123456@gmail.com</a>
-        </div>
-        <br />
-        <div class="icontext" style="font-size:15px">
-            <RadzenIcon Icon="phone" /><span style="padding-left: 10px;">(+886)981-928-535</span>
-        </div>
+</div>
+<div class="sidebar-footer">
+    <div class="icontext" style="font-size:15px">
+        <RadzenIcon Icon="mail" /> <a href="mailto:p147123456@gmail.com" style="padding-left:10px;">p147123456@gmail.com</a>
+    </div>
+    <br />
+    <div class="icontext" style="font-size:15px">
+        <RadzenIcon Icon="phone" /><span style="padding-left: 10px;">(+886)981-928-535</span>
     </div>
 </div>
 @code {

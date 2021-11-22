@@ -17,6 +17,9 @@
     vertical-align: text-top;
     top: -2px;
 }
+.sidebar-img {
+    display: block;
+}
 
 .nav-item {
     font-size: 0.9rem;
@@ -52,13 +55,26 @@
 
 @media (min-width: 641px) {
     .navbar-toggler {
-        display: none;
+        display:none;
     }
+    .collapse {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
+@media (max-width: 640.98px) {
 
     .collapse {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+    .nav flex-column{
+        display:inherit;
+    }
+    .nav-item:first-of-type {
+        padding-top: 0;
+    }
+   
 }
 .icontext {
     align-items: center;
@@ -69,8 +85,8 @@
     position: absolute;
     width: 100%;
     bottom: 0;
-    text-align:center;
-    color:white;
+    text-align: center;
+    color: white;
     list-style-type: none;
     padding: 1em;
 }
