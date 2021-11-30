@@ -19,7 +19,8 @@
 }
 .sidebar-img {
     display: block;
-    padding-top:30px
+    padding-top:30px;
+    padding-bottom:30px;
 }
 
 .nav-item {
