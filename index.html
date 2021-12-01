@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="author" content="黃志穎">
+    <meta name="keywords" content="黃志穎,個人網站,NonoHuang,Blazor,GitHubPage" />
+    <meta name="description" content="黃志穎的個人網站,使用Blazor製作,並使用GitHub Page發佈">
+    <meta name="distribution" content="台灣 - 桃園">
+    <title>黃志穎 - NonoHuang 個人網站</title>
+    <base href="/AboutMe/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="AboutMe.styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/default-base.css">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <meta name="google-site-verification" content="HBk8itsPH_RFjMT6j1xvnjEniLXlZ-4ErqbwCYc5l3g" />
+    <style>
+        /* This CSS is specific to the current HTML.
+            Note that this snippet only contains the necessary changes and not the full Blazor app template */
+        .loading-section {
+            text-align: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+            .loading-section h2 {
+                color: #F6416C;
+            }
+
+        .loader-dot {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: #F6416C;
+            display: inline-block;
+            -webkit-animation: grow 2.1s infinite ease-in-out both;
+            animation: grow 2.1s infinite ease-in-out both;
+        }
+
+            .loader-dot.dot1 {
+                -webkit-animation-delay: -0.96s;
+                animation-delay: -0.96s;
+            }
+
+            .loader-dot.dot2 {
+                -webkit-animation-delay: -0.48s;
+                animation-delay: -0.48s;
+            }
+
+        @-webkit-keyframes grow {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0)
+            }
+
+            40% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        // Single Page Apps for GitHub Pages
+        // MIT License
+        // https://github.com/rafgraph/spa-github-pages
+        // This script checks to see if a redirect is present in the query string,
+        // converts it back into the correct url and adds it to the
+        // browser's history using window.history.replaceState(...),
+        // which won't cause the browser to attempt to load the new url.
+        // When the single page app is loaded further down in this file,
+        // the correct url will be waiting in the browser's history for
+        // the single page app to route accordingly.
+        (function (l) {
+            if (l.search[1] === '/') {
+                var decoded = l.search.slice(1).split('&').map(function (s) {
+                    return s.replace(/~and~/g, '&')
+                }).join('?');
+                window.history.replaceState(null, null,
+                    l.pathname.slice(0, -1) + decoded + l.hash
+                );
+            }
+        }(window.location))
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <app>
+            <div class="loading-section">
+                <h2>歡迎您來到我的網站</h2>
+                <div class="short-description">請稍等，網站正在載入中。</div>
+                <div class="loader mt-5">
+                    <div class="loader-dot dot1"></div>
+                    <div class="loader-dot dot2"></div>
+                    <div class="loader-dot dot3"></div>
+                </div>
+            </div>
+        </app>
+    </div>
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>
