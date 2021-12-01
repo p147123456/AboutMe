@@ -5,17 +5,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="author" content="黃志穎">
-    <meta name="keywords" content="黃志穎,個人網站,NonoHuang,Blazor,GitHubPage"/>
+    <meta name="keywords" content="黃志穎,個人網站,NonoHuang,Blazor,GitHubPage" />
     <meta name="description" content="黃志穎的個人網站,使用Blazor製作,並使用GitHub Page發佈">
     <meta name="distribution" content="台灣 - 桃園">
     <title>黃志穎 - NonoHuang 個人網站</title>
-    <base href="/AboutMe/" />
+    <base href="/" />
+    <!--<base href="/AboutMe/" />-->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link href="AboutMe.styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="_content/Radzen.Blazor/css/default-base.css">
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <meta name="google-site-verification" content="HBk8itsPH_RFjMT6j1xvnjEniLXlZ-4ErqbwCYc5l3g" />
+    <meta property="fb:app_id" content="1138566526950602;" />
+    <meta property="fb:admins" content="100002288392785" />
     <style>
         /* This CSS is specific to the current HTML.
             Note that this snippet only contains the necessary changes and not the full Blazor app template */
@@ -64,18 +67,20 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v12.0&appId=1138566526950602&autoLogAppEvents=1" nonce="kUI7VE2q"></script>
     <div id="app">
-            <app>
-                <div class="loading-section">
-                    <h2>歡迎您來到我的網站</h2>
-                    <div class="short-description">請稍等，網站正在載入中。</div>
-                    <div class="loader mt-5">
-                        <div class="loader-dot dot1"></div>
-                        <div class="loader-dot dot2"></div>
-                        <div class="loader-dot dot3"></div>
-                    </div>
+        <app>
+            <div class="loading-section">
+                <h2>歡迎您來到我的網站</h2>
+                <div class="short-description">請稍等，網站正在載入中。</div>
+                <div class="loader mt-5">
+                    <div class="loader-dot dot1"></div>
+                    <div class="loader-dot dot2"></div>
+                    <div class="loader-dot dot3"></div>
                 </div>
-            </app>
+            </div>
+        </app>
     </div>
 
     <div id="blazor-error-ui">
