@@ -1,16 +1,16 @@
 ﻿@inherits LayoutComponentBase
-
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <div class="main">
-        <div class="content px-4" style="padding-top:30px">
-            @Body
+    <div id="fb-root"></div>
+    <div class="page">
+        <div class="sidebar">
+            <NavMenu />
         </div>
-        <div class="footer">
-            <div class="fb-comments" data-href="https://p147123456.github.io/AboutMe/" data-width="50%" data-numposts="5"></div>
+
+        <div class="main">
+            <div class="content px-4" style="padding-top:30px">
+                @Body
+            </div>
+            <div class="foo">
+                <div class="fb-comments" data-href="https://p147123456.github.io/AboutMe/" data-width="50%" data-numposts="5"></div>
+            </div>
         </div>
     </div>
-</div>
