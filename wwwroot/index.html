@@ -1,111 +1,136 @@
-﻿<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
     <meta name="author" content="黃志穎">
-    <meta name="keywords" content="黃志穎,個人網站,NonoHuang,Blazor,GitHubPage" />
-    <meta name="description" content="黃志穎的個人網站,使用Blazor製作,並使用GitHub Page發佈">
+    <meta name="keywords" content="黃志穎,個人網站,NonoHuang" />
+    <meta name="description" content="黃志穎的個人網站">
     <meta name="distribution" content="台灣 - 桃園">
     <title>黃志穎 - NonoHuang 個人網站</title>
-    <base href="/AboutMe/" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
-    <link href="AboutMe.styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="_content/Radzen.Blazor/css/default-base.css">
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-    <meta name="google-site-verification" content="HBk8itsPH_RFjMT6j1xvnjEniLXlZ-4ErqbwCYc5l3g" />
-    <style>
-        /* This CSS is specific to the current HTML.
-            Note that this snippet only contains the necessary changes and not the full Blazor app template */
-        .loading-section {
-            text-align: center;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-            .loading-section h2 {
-                color: #F6416C;
-            }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
 
-        .loader-dot {
-            height: 20px;
-            width: 20px;
-            border-radius: 50%;
-            background-color: #F6416C;
-            display: inline-block;
-            -webkit-animation: grow 2.1s infinite ease-in-out both;
-            animation: grow 2.1s infinite ease-in-out both;
-        }
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-            .loader-dot.dot1 {
-                -webkit-animation-delay: -0.96s;
-                animation-delay: -0.96s;
-            }
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
-            .loader-dot.dot2 {
-                -webkit-animation-delay: -0.48s;
-                animation-delay: -0.48s;
-            }
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-        @-webkit-keyframes grow {
-            0%, 80%, 100% {
-                -webkit-transform: scale(0)
-            }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
 
-            40% {
-                -webkit-transform: scale(1.0)
-            }
-        }
-    </style>
-    <script type="text/javascript">
-        // Single Page Apps for GitHub Pages
-        // MIT License
-        // https://github.com/rafgraph/spa-github-pages
-        // This script checks to see if a redirect is present in the query string,
-        // converts it back into the correct url and adds it to the
-        // browser's history using window.history.replaceState(...),
-        // which won't cause the browser to attempt to load the new url.
-        // When the single page app is loaded further down in this file,
-        // the correct url will be waiting in the browser's history for
-        // the single page app to route accordingly.
-        (function (l) {
-            if (l.search[1] === '/') {
-                var decoded = l.search.slice(1).split('&').map(function (s) {
-                    return s.replace(/~and~/g, '&')
-                }).join('?');
-                window.history.replaceState(null, null,
-                    l.pathname.slice(0, -1) + decoded + l.hash
-                );
-            }
-        }(window.location))
-    </script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d8ed5aecb7.js" crossorigin="anonymous"></script>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
-<body>
-    <div id="app">
-        <app>
-            <div class="loading-section">
-                <h2>歡迎您來到我的網站</h2>
-                <div class="short-description">請稍等，網站正在載入中。</div>
-                <div class="loader mt-5">
-                    <div class="loader-dot dot1"></div>
-                    <div class="loader-dot dot2"></div>
-                    <div class="loader-dot dot3"></div>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="sidebar-text d-flex flex-column h-100 justify-content-center text-center">
+                    <img class="mx-auto d-block w-75 bg-primary img-fluid rounded-circle mb-4 p-3" src="img/profile.jpg" alt="Image">
+                    <h1>黃志穎</h1>
+                    <p class="mb-4">
+                        喜愛學習各種新事物，近期使用Flutter製作手機應用並上架GooglePlay及AppStore雙平台
+                    </p>
+                    <div class="d-flex justify-content-center mb-5">
+                        <a class="btn btn-outline-primary mr-2" href="https://github.com/p147123456"><i class="fa-brands fa-github" title="https://github.com/p147123456"></i></a>
+                        <a class="btn btn-outline-primary mr-2" href="mailto:p147123456@gmail.com"><i class="fa-solid fa-envelope" title="p147123456@gmail.com"></i></a>
+                        <a class="btn btn-outline-primary mr-2" href="https://www.instagram.com/as147123456/"><i class="fab fa-instagram" title="https://www.instagram.com/as147123456/"></i></a>
+                    </div>
+                    <div>
+                        <h3>學歷</h3>
+                        <ul>
+                            <li>國立澎湖科技大學-資訊工程學系 2014-2018</li>
+                        </ul>
+                    </div><br />
+                    <div>
+                        <h3>工作經歷</h3>
+                        <ul>
+                            <li>佳樂科技-軟體工程師 2018-至今</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar-icon d-flex flex-column h-100 justify-content-center text-right">
+                    <i class="fas fa-2x fa-angle-double-right text-primary"></i>
                 </div>
             </div>
-        </app>
-    </div>
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
-    <script src="_framework/blazor.webassembly.js"></script>
-</body>
 
+
+            <div class="content">
+                <h3 style="font-weight:bold">專案經歷</h3>
+                <div class="row" style="margin:2vw">
+                    <div>
+                        <img style="height:30vh" src="img/app2.png" alt="image">
+                        <img style="height:30vh" src="img/app3.png" alt="image">
+                    </div>
+                    <div>
+                        <br />
+                        <h4>澎湖電動機車充電站查詢</h4>
+                        利用澎湖政府開放資料拿取電動機車充電站位置，並結合Google Map API 的充電站推薦系統以及內含澎科大同學私人推薦景點
+                        <p></p>
+                        解決痛點:
+                        <ul>
+                            <li>讓使用者(特別是遊客)達到最有效率到達充電站的位置</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="row" style="margin:2vw">
+                    <div>
+                        <img style="height:30vh" src="img/blog.png" alt="image">
+                    </div>
+                    <div>
+                        <br />
+                        <h4>匿名的論壇</h4>
+                        使用Razor框架並搭配HTML及CSS等前端語法以及C#後端和MySQL資料庫所完成的論壇，包含會員註冊登入以及發表文章等功能
+                    </div>
+                </div>
+
+                <h3 style="font-weight:bold">擅長工具/技能</h3>
+                <div style="margin:2vw">
+                    <p style="color:#2A4B7C;font-size:x-large"><i class="fa-brands fa-html5">HTML</i></p>
+                    <p style="color:#2A4B7C;font-size:x-large"><i class="fa-brands fa-css3">CSS</i></p>
+                    <p style="color:#2A4B7C;font-size:x-large"><i class="fa-brands fa-bootstrap">Bootstrap</i></p>
+                    <p style="color:#2A4B7C;font-size:x-large">Blazor</p>
+                    <p style="color:#2A4B7C;font-size:x-large">Radzen</p>
+                    <p style="color:#2A4B7C;font-size:x-large"><i class="fa-brands fa-android">Android</i></p>
+                    <p style="color:#2A4B7C;font-size:x-large">Flutter</p>
+                    <p style="color:#2A4B7C;font-size:x-large"><i class="fa-brands fa-java">Java</i></p>
+                    <p style="color:#2A4B7C;font-size:x-large">C#</p>
+                    <p style="color:#2A4B7C;font-size:x-large">Git</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
